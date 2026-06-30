@@ -409,6 +409,14 @@ return res.status(400).json({
 
 const PORT = process.env.PORT || 3001;
 
+app.get("/", (req, res) => {
+    res.json({
+        status: "ok",
+        servicio: "Cotizador IA Premium",
+        version: "1.0"
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor premium iniciado en puerto ${PORT}`);
 });
