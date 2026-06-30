@@ -407,8 +407,8 @@ return res.status(400).json({
 });
 
 
+const PORT = process.env.PORT || 3001;
 
-
-app.listen(3001, () => {
-  console.log("Servidor premium iniciado en puerto 3001");
+app.listen(PORT, () => {
+    console.log(`Servidor premium iniciado en puerto ${PORT}`);
 });
