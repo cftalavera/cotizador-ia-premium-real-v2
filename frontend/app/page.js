@@ -14,17 +14,17 @@ export default function Home() {
   const [ciudad, setCiudad] = useState("Cuernavaca");
   const [tipoTaller, setTipoTaller] = useState("Generalista");
   const [ultimaActualizacion, setUltimaActualizacion] = useState("");
+	
+  const API_URL = process.env.NEXT_PUBLIC_API_URL||"https://cotizador-ia-premium-real-v2-production.up.railway.app";
 
+	
 const actualizarPrecios = async () => {
 
   try {
 
-    const response = await fetch(
-      "http://localhost:3001/actualizar-precios",
-      {
-        method: "POST"
-      }
-    );
+    const response = await fetch(`${API_URL}/actualizar-precios`, {
+  method: "POST"
+});
 
     const data = await response.json();
 
@@ -71,11 +71,10 @@ const actualizarPrecios = async () => {
 
     try {
 
-      const response = await fetch("http://localhost:3001/cotizar", {
-        method: "POST",
-        body: formData
-      });
-
+      const response = await fetch(`${API_URL}/cotizar`, {
+		  method: "POST",
+		  body: formData
+		});
       const data = await response.json();
 
       setResultado(data.data);
