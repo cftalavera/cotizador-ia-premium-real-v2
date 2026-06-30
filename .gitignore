@@ -1,0 +1,15 @@
+node_modules
+.env
+
+.next
+dist
+build
+
+uploads
+
+coverage
+
+*.log
+
+.DS_Store
+Thumbs.db

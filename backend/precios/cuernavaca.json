@@ -1,0 +1,17 @@
+{
+  "ultima_actualizacion": "2026-06-24T06:56:11.252Z",
+  "ciudad": "Cuernavaca",
+  "fuente": "IA + Mercado Local",
+  "generalista": {
+    "hora_hojalateria": 250,
+    "hora_pintura": 300,
+    "materiales_base": 1500,
+    "difuminado": 800
+  },
+  "premium": {
+    "hora_hojalateria": 450,
+    "hora_pintura": 550,
+    "materiales_base": 3500,
+    "difuminado": 1800
+  }
+}
